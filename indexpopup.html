@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(56, 114, 114);
+        }
+        .btn{
+            padding:  10px 60px;
+            background-color: #fff;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            font-size: 22px;
+            font-weight: 500;
+            border-radius: 30px;
+        }
+        .popup{
+            width: 400px;
+            background: #fff;
+            border-radius: 6px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0.1);
+            text-align: center;
+            padding: 0 30px 30px;
+            visibility: hidden;
+            transition: transform 0.4s, top 0.4s;
+        }
+        .open-popup{
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%,-50%) scale(1);
+        }
+
+        .popup img{
+            width: 100px;
+            margin-top: -50px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px;
+        }
+        .popup h2{
+            font-size: 38px;
+            font-weight: 500px;
+            margin: 30px 0 10px;
+        }
+        .popup button{
+            width: 100%;
+            margin-top: 50px;
+            padding: 10px 0;
+            background: #6fd649;
+            color: #fff;
+            border: 0;
+            outline: none;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 20px rgb(138, 9, 88);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button type="submit" class="btn" onclick="openPopup()">button</button>
+         <div class="popup" id="popup">
+            <img src="404-tick.png" alt="">
+            <h2>Thank you</h2>
+            <p>your details have been success Thanks!</p>
+            <button type="button"  onclick="closePopup()">ok</button>
+         </div>
+    </div>
+    <script>
+        let popUp = document.getElementById("popup");
+
+        function openPopup(){
+            popUp.classList.add("open-popup")
+
+        }
+
+        function closePopup(){
+            popUp.classList.remove("open-popup")
+        }
+    </script>
+</body>
+</html>

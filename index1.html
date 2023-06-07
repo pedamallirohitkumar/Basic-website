@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .positions{
+        position: absolute;
+        left: 35%;
+        transform: translate(-50%,-50%) scale(0.1);
+        visibility: hidden;
+    }
+    .rohit{
+        position: inherit;
+        top: 50%;
+        left: 50%;
+        /* translate: transform(-50%,-50%); */
+        border: solid;
+        width: 200px;
+    }
+    .popUp{
+        position: inherit;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(1);
+border: solid;
+        width: 200px;
+    }
+    .close1{
+        position: inherit;
+        right: 126px;
+        /* top:px; */
+        left: 240px;
+        /* translate: transform(-50%,-50%); */
+    }
+</style>
+<body>
+    <div class="positions">
+        <p  class="rohit" style="text-align: center; padding: 30px;">Hello Rohit You are the greatest ever</p>
+         <img id="closePopUp"  class="close1" src="./ref-close.png"/>
+    </div>
+    <button type="button" id="button" onclick="buttona()">submit</button>
+    <script>
+          let button = document.getElementById("button");
+        function buttona(){
+          }
+    </script>
+</body>
+</html>
